@@ -43,6 +43,8 @@
 
 .App {
   text-align: left;
+  background: #fff;
+  transition: 0.5s;
 }
 
 .container {
