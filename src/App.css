@@ -1,38 +1,113 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("./assets/fonts/Flaticon.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Flexslider";
+  src: url("./assets/fonts/flexslider-icon.eot");
+  src: url("./assets/fonts/flexslider-icon.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/flexslider-icon.woff") format("woff"),
+    url("./assets/fonts/flexslider-icon.ttf") format("truetype"),
+    url("./assets/fonts/flexslider-icon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Webfont";
+  src: url("./assets/fonts/fontawesome-webfont.eot");
+  src: url("./assets/fonts/fontawesome-webfont.eot#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/fontawesome-webfont.woff2") format("woff2"),
+    url("./assets/fonts/fontawesome-webfont.woff") format("woff"),
+    url("./assets/fonts/fontawesome-webfont.ttf") format("truetype"),
+    url("./assets/fonts/fontawesome-webfont.svg#svgFontName") format("svg");
+  font-weight: normal;
+  font-size: normal;
+}
+
+@font-face {
+  font-family: "Slick";
+  src: url("./assets/fonts/slick.eot");
+  src: url("./assets/fonts/slick.eot#iefix") format("embedded-opentype"),
+    url("./assets/fonts/slick.woff") format("woff"),
+    url("./assets/fonts/slick.ttf") format("truetype"),
+    url("./assets/fonts/slick.svg") format("svg");
+  font-weight: normal;
+  font-size: normal;
+}
+
 .App {
-  text-align: center;
+  text-align: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  margin: 50px;
+  padding-bottom: 100px;
+  border-bottom: 3px solid #eee;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-fluid {
+  margin: 0;
+  padding: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.primary-btn a,
+button {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: transparent;
+  display: inline-block;
+  padding: 8px 20px;
+  color: #535ba0;
+  border: 2px solid #535ba0;
+  transition: all 0.5s;
+}
+
+.primary-btn a:hover,
+button:hover {
+  color: #fff;
+  background-color: rgba(83, 91, 160, 1);
+}
+
+.text-link {
+  text-decoration: none;
+}
+
+/* .row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  margin-right: -15px;
+  margin-left: -15px;
+} */
+
+.col-3-l {
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.col-3 {
+  float: left;
+  max-width: 33.33%;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.col-1 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.col-3-l {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }

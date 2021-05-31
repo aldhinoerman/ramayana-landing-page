@@ -1,0 +1,52 @@
+.post1 img {
+  width: 100%;
+}
+
+.post1 h4 {
+  padding: 20px 0;
+}
+
+.post1 p {
+  padding-bottom: 20px;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+.post2 .row {
+  display: flex;
+  flex-direction: row;
+}
+
+.post2 h4 {
+  padding: 20px 0 20px 80px;
+}
+
+.post2 p {
+  padding: 0 0 20px 80px;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+.post2 button {
+  margin-left: 80px;
+}
+
+.post3 .row {
+  display: flex;
+  flex-direction: row;
+}
+
+.post3 h4 {
+    padding: 20px 0;
+  }
+
+.post3 p {
+  padding-bottom: 20px;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+.post3 img {
+    max-width: 520px;
+    margin-left: 50px;
+}
