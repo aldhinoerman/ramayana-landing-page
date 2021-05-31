@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
 import Home from './pages/Home/Home';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Loading } from './components/Loading/Loading';
 import ScrollButton from './components/ScrollButton/ScrollButton';
+import { Other } from './pages/Other/Other';
 
 class App extends React.Component {
   state = {
@@ -26,20 +27,23 @@ class App extends React.Component {
     const { loading } = this.state;
     return (
       <>
-        <BrowserRouter>
+        <Router>
           <Switch>
             {loading ? (<Loading />) :
               (
                 <div className="App">
-                  <Route path="/">
+                  <Route exact path="/">
                     <Home />
-                    <ScrollButton scrollStepInPx='50' delayInMs='16.66' />
                   </Route>
+                  <Route path="/other">
+                    <Other />
+                  </Route>
+                  <ScrollButton scrollStepInPx='50' delayInMs='16.66' />
                 </div>
               )
             }
           </Switch>
-        </BrowserRouter>
+        </Router>
       </>
     );
   }

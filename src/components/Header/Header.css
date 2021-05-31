@@ -17,6 +17,7 @@
 
 .header .header__toggle {
   display: inline-block;
+  cursor: pointer;
   font-size: 25px;
   padding-top: 10px;
   padding-left: 35px;

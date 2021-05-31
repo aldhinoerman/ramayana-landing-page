@@ -1,0 +1,216 @@
+.sidenav {
+  background: #24252d;
+  height: 100%;
+  width: 480px;
+  opacity: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: relative;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  transform: translateX(-50%);
+}
+
+.sidenav > .inner {
+  position: relative;
+  width: 420px;
+  padding: 0px 50px;
+}
+
+.sidenav > .inner > #search {
+  background-color: #2d2e39;
+  height: 100px;
+  width: 420px;
+  display: inline-block;
+  margin-left: -50px;
+}
+
+.sidenav > .inner > #search input {
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  padding: 0px 50px;
+  color: #fff;
+}
+
+#search form:before {
+  font-family: "Webfont";
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  color: #fff;
+  content: "\f002";
+  cursor: default;
+  display: block;
+  position: absolute;
+  right: 50px;
+  text-align: center;
+  top: 35px;
+  font-size: 18px;
+}
+
+.sidenav .menu {
+  margin-top: 50px;
+}
+
+.sidenav .menu ul {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  font-family: 400;
+  letter-spacing: 0.075em;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.sidenav .menu ul a,
+.sidenav .menu ul span {
+  color: #fff;
+  border-bottom: 0;
+  cursor: pointer;
+  display: block;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 15px 0px;
+}
+.sidenav .menu ul li ul a,
+.sidenav .menu ul li ul span {
+  padding: 10px 0px;
+}
+
+.sidenav .menu ul a:hover,
+.sidenav .menu ul span:hover {
+  color: #535ba0;
+}
+
+.sidenav .menu ul a.submenu,
+.sidenav .menu ul span.submenu {
+  -moz-transition: color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  position: relative;
+}
+
+.sidenav .menu ul a.submenu:before,
+.sidenav .menu ul span.submenu:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Webfont";
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none !important;
+}
+
+.sidenav .menu ul a.submenu:before,
+.sidenav .menu ul span.submenu:before {
+  -moz-transition: color 0.2s ease-in-out, -moz-transform 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out, -ms-transform 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  color: #fff;
+  content: "\f078";
+  position: absolute;
+  right: 0;
+}
+
+.sidenav .menu ul a.submenu:hover:before,
+.sidenav .menu ul span.submenu:hover:before {
+  color: #535ba0;
+}
+
+.sidenav .menu ul a.submenu.active + ul,
+.sidenav .menu ul span.submenu.active + ul {
+  display: block;
+}
+
+.sidenav .menu ul a.submenu.active:before,
+.sidenav .menu ul span.submenu.active:before {
+  -moz-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.sidenav .menu > ul > li {
+  border-top: solid 1px #1a1b20;
+  margin: 0.5em 0 0 0;
+  padding: 0.5em 0 0 0;
+}
+
+.sidenav .menu > ul > li > ul {
+  color: #9fa3a6;
+  display: none;
+  margin: 0.5em 0 1.5em 0;
+  padding-left: 1em;
+}
+
+.sidenav .menu > ul > li > ul a,
+.sidenav .menu > ul > li > ul span {
+  font-size: 13px;
+}
+
+.sidenav .menu > ul > li > ul > li {
+  margin: 0.125em 0 0 0;
+  padding: 0.125em 0 0 0;
+}
+
+.sidenav .menu > ul > li:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* .sidenav a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+}
+
+.sidenav ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sidenav ul > li {
+  font-size: 16px;
+  border-bottom: 1px solid #fff;
+  transition: all 0.25s ease;
+  animation: fadeInRight 0.25s ease forwards;
+  opacity: 0;
+}
+
+.sidenav ul > li:hover {
+  opacity: 0.8;
+  transition: all 0.25s ease;
+  background: #000;
+  cursor: pointer;
+} */
+
+.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.25s ease;
+  transform: translateX(0);
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
