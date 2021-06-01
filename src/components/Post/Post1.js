@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Posts.css'
 
 const Post1 = props => {
@@ -9,7 +10,7 @@ const Post1 = props => {
                     <img src={props.image} alt="banner" />
                     <h4>{props.title}</h4>
                     <p>{props.content}</p>
-                    <button className="primary-btn">Read More</button>
+                    <Link to="/" className="text-link"><button className="primary-btn">Read More</button></Link>
                 </div>
             </div>
         </div>

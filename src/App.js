@@ -28,17 +28,13 @@ class App extends React.Component {
     return (
       <>
         <Router>
+          <ScrollButton scrollStepInPx='50' delayInMs='16.66' />
           <Switch>
             {loading ? (<Loading />) :
               (
                 <div className="App">
-                  <Route exact path="/">
-                    <Home />
-                  </Route>
-                  <Route path="/other">
-                    <Other />
-                  </Route>
-                  <ScrollButton scrollStepInPx='50' delayInMs='16.66' />
+                  <Route exact path="/" component={Home} />
+                  <Route path="/other" component={Other} />
                 </div>
               )
             }

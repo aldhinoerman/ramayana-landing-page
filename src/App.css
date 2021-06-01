@@ -51,7 +51,8 @@
   margin: 50px;
   padding-bottom: 100px;
   border-bottom: 3px solid #eee;
-  z-index: -1;
+  position: relative;
+  /* z-index: -1; */
 }
 
 .container-fluid {
@@ -80,6 +81,10 @@ button:hover {
 
 .text-link {
   text-decoration: none;
+}
+
+.text-link button{
+  cursor: pointer;
 }
 
 /* .row {
