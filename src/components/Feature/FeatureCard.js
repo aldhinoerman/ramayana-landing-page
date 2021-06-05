@@ -1,5 +1,5 @@
 import React from 'react';
-import './Feature.css';
+import './Feature.scss';
 
 const FeatureCard = props => {
     return (

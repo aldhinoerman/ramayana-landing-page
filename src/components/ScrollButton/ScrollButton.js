@@ -1,5 +1,5 @@
 import React from 'react';
-import './ScrollButton.css';
+import './ScrollButton.scss';
 import * as BsIcons from 'react-icons/bs';
 import { IconContext } from 'react-icons/lib';
 

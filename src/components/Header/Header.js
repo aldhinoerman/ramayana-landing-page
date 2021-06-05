@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.css';
+import './Header.scss';
 import * as FaIcons from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { Link } from 'react-router-dom';

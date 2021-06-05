@@ -1,0 +1,83 @@
+@import './styles/mixins';
+@import './styles/variables';
+@import './styles/global';
+@import './styles/typography';
+
+.App {
+  text-align: left;
+  background: #fff;
+  transition: 0.5s;
+}
+
+.container {
+  margin: 50px;
+  padding-bottom: 100px;
+  border-bottom: 3px solid #eee;
+  position: relative;
+  /* z-index: -1; */
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 25px;
+}
+
+.primary-btn a,
+button {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: transparent;
+  display: inline-block;
+  padding: 8px 20px;
+  color: #535ba0;
+  border: 2px solid #535ba0;
+  transition: all 0.5s;
+}
+
+.primary-btn a:hover,
+button:hover {
+  color: #fff;
+  background-color: rgba(83, 91, 160, 1);
+}
+
+.text-link {
+  text-decoration: none;
+}
+
+.text-link button{
+  cursor: pointer;
+}
+
+/* .row {
+  display: flex;
+  flex-direction: row;
+  margin-right: -15px;
+  margin-left: -15px;
+} */
+
+.col-3-l {
+  position: relative;
+}
+
+.col-3 {
+  float: left;
+  max-width: 33.33%;
+  width: 100%;
+}
+
+.col-1 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.col-3-l {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

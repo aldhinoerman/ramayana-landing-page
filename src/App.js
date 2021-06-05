@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Home from './pages/Home/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Loading } from './components/Loading/Loading';
@@ -28,11 +28,11 @@ class App extends React.Component {
     return (
       <>
         <Router>
-          <ScrollButton scrollStepInPx='50' delayInMs='16.66' />
           <Switch>
             {loading ? (<Loading />) :
               (
                 <div className="App">
+                  <ScrollButton scrollStepInPx='50' delayInMs='16.66' />
                   <Route exact path="/" component={Home} />
                   <Route path="/other" component={Other} />
                 </div>
