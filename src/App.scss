@@ -1,20 +1,19 @@
-@import './styles/mixins';
-@import './styles/variables';
-@import './styles/global';
-@import './styles/typography';
+@import "./styles/mixins";
+@import "./styles/variables";
+@import "./styles/global";
+@import "./styles/typography";
 
 .App {
   text-align: left;
-  background: #fff;
+  background: $bgColor;
   transition: 0.5s;
 }
 
 .container {
-  margin: 50px;
+  margin: 75px;
   padding-bottom: 100px;
-  border-bottom: 3px solid #eee;
+  border-bottom: 3px solid $secondBgColor;
   position: relative;
-  /* z-index: -1; */
 }
 
 .container-fluid {
@@ -30,34 +29,33 @@ button {
   background-color: transparent;
   display: inline-block;
   padding: 8px 20px;
-  color: #535ba0;
-  border: 2px solid #535ba0;
+  color: $primaryColor;
+  border: 2px solid $primaryColor;
   transition: all 0.5s;
-}
-
-.primary-btn a:hover,
-button:hover {
-  color: #fff;
-  background-color: rgba(83, 91, 160, 1);
+  &:hover {
+    color: $bgColor;
+    background-color: rgba(83, 91, 160, 1);
+  }
 }
 
 .text-link {
   text-decoration: none;
+  button {
+    cursor: pointer;
+  }
 }
 
-.text-link button{
-  cursor: pointer;
-}
-
-/* .row {
+.row {
   display: flex;
   flex-direction: row;
-  margin-right: -15px;
-  margin-left: -15px;
-} */
-
-.col-3-l {
-  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 .col-3 {
@@ -74,10 +72,4 @@ button:hover {
 .col-3-l {
   flex: 0 0 50%;
   max-width: 50%;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }

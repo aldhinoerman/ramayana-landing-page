@@ -1,0 +1,18 @@
+@import "./typography";
+@import "./variables";
+
+@mixin cardTypograph($size-value, $weight-value, $color-value, $ltr-value) {
+  font-size: $size-value;
+  font-weight: $weight-value;
+  color: $color-value;
+  letter-spacing: $ltr-value;
+}
+
+@mixin cardIcon($icon-img, $icon-hover) {
+  .feature__icon {
+    background-image: url(#{$imgPath}/#{$icon-img});
+  }
+  &:hover .feature__icon {
+    background-image: url(#{$imgPath}/#{$icon-hover});
+  }
+}

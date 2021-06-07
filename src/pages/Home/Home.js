@@ -7,14 +7,12 @@ import Posts from '../../components/Post/Posts';
 
 function Home() {
     return (
-        <div>
+        <>
             <Header />
-            <div className="container">
-                <Banner />
-                <Feature />
-                <Posts />
-            </div>
-        </div>
+            <Banner />
+            <Feature />
+            <Posts />
+        </>
     )
 }
 

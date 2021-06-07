@@ -1,93 +1,58 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .feature {
-  margin-top: 200px;
-}
-
-.feature .feature__card {
-  margin-bottom: 10px;
-  margin-right: 10px;
-  background-color: #eaebef;
-  padding: 50px 40px;
-  text-align: center;
-  transition: all 0.5s;
-}
-
-.feature .feature__card p {
-  color: #7a7a7a;
-}
-
-.feature .feature__card:hover {
-  background-color: #535ba0;
-}
-
-.feature .feature__card:hover h4,
-.feature .feature__card:hover p {
-  color: #fff;
-}
-
-.feature .feature__card h4 {
-  margin-bottom: 20px;
-  transition: all 0.5s;
-}
-
-.feature .feature__card p {
-  margin-bottom: 0px;
-  transition: all 0.5s;
-}
-
-.feature .feature__card .feature__icon {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  margin-bottom: 30px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: all 0.5s;
-}
-
-.feature .card__one .feature__icon {
-  background-image: url("../../assets/images/icon_01.png");
-}
-
-.feature .card__one:hover .feature__icon {
-  background-image: url("../../assets/images/icon_hover_01.png");
-}
-
-.feature .card__two .feature__icon {
-  background-image: url("../../assets/images/icon_02.png");
-}
-
-.feature .card__two:hover .feature__icon {
-  background-image: url("../../assets/images/icon_hover_02.png");
-}
-
-.feature .card__three .feature__icon {
-  background-image: url("../../assets/images/icon_03.png");
-}
-
-.feature .card__three:hover .feature__icon {
-  background-image: url("../../assets/images/icon_hover_03.png");
-}
-
-.feature .card__four .feature__icon {
-  background-image: url("../../assets/images/icon_04.png");
-}
-
-.feature .card__four:hover .feature__icon {
-  background-image: url("../../assets/images/icon_hover_04.png");
-}
-
-.feature .card__five .feature__icon {
-  background-image: url("../../assets/images/icon_05.png");
-}
-
-.feature .card__five:hover .feature__icon {
-  background-image: url("../../assets/images/icon_hover_05.png");
-}
-
-.feature .card__six .feature__icon {
-  background-image: url("../../assets/images/icon_06.png");
-}
-
-.feature .card__six:hover .feature__icon {
-  background-image: url("../../assets/images/icon_hover_06.png");
+  .card__one {
+    @include cardIcon("icon_01.png", "icon_hover_01.png");
+  }
+  .card__two {
+    @include cardIcon("icon_02.png", "icon_hover_02.png");
+  }
+  .card__three {
+    @include cardIcon("icon_03.png", "icon_hover_03.png");
+  }
+  .card__four {
+    @include cardIcon("icon_04.png", "icon_hover_04.png");
+  }
+  .card__five {
+    @include cardIcon("icon_05.png", "icon_hover_05.png");
+  }
+  .card__six {
+    @include cardIcon("icon_06.png", "icon_hover_06.png");
+  }
+  .feature__card {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: $featureBgColor;
+    padding: 50px 40px;
+    height: 175px;
+    max-height: 100vh;
+    text-align: center;
+    transition: all 0.5s;
+    &:hover {
+      background-color: $primaryColor;
+      h4,
+      p {
+        color: $bgColor;
+      }
+    }
+    p {
+      color: $mutedParagraphColor;
+      margin-bottom: 0px;
+      transition: all 0.5s;
+    }
+    h4 {
+      margin-bottom: 20px;
+      transition: all 0.5s;
+    }
+    .feature__icon {
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      margin-bottom: 30px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: all 0.5s;
+    }
+  }
 }

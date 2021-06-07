@@ -42,7 +42,7 @@ class Header extends React.Component {
                     </IconContext.Provider>
                     <Link to="/" className="text-link"><h1>RAMAYANA</h1></Link>
                 </div>
-                <Navbar class={this.state.style} item="Satu" />
+                <Navbar class={this.state.style} />
             </>
         )
     }
