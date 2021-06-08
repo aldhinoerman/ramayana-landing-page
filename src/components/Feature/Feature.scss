@@ -56,3 +56,21 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .feature {
+    .feature__card {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .feature {
+    .feature__card {
+      height: 200px;
+    }
+  }
+}

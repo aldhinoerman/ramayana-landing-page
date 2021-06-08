@@ -11,6 +11,7 @@ const Post1 = props => {
                         <img src={props.image} alt="banner" />
                         <h4>{props.title}</h4>
                         <p>{props.content}</p>
+                        <p>{props.content2}</p>
                         <Link to="/" className="text-link"><button className="primary-btn">Read More</button></Link>
                     </div>
                 </div>

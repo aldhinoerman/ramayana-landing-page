@@ -26,21 +26,21 @@ class App extends React.Component {
   render() {
     const { loading } = this.state;
     return (
-      <>
-        <Router>
-          <Switch>
+      <Router>
+        <Switch>
+          <>
             {loading ? (<Loading />) :
               (
-                <div className="App">
+                <div>
                   <ScrollButton scrollStepInPx='50' delayInMs='16.66' />
                   <Route exact path="/" component={Home} />
                   <Route path="/other" component={Other} />
                 </div>
               )
             }
-          </Switch>
-        </Router>
-      </>
+          </>
+        </Switch>
+      </Router >
     );
   }
 }

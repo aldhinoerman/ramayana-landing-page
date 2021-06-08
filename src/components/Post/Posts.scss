@@ -34,3 +34,27 @@
     left: 75%;
   }
 }
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .posts {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .post2 {
+    img {
+      max-width: 380px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .post2 {
+    img {
+      max-width: 475px;
+    }
+  }
+}

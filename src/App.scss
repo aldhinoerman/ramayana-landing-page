@@ -17,8 +17,11 @@
 }
 
 .container-fluid {
-  margin: 0;
-  padding: 25px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .primary-btn a,
@@ -72,4 +75,154 @@ button {
 .col-3-l {
   flex: 0 0 50%;
   max-width: 50%;
+}
+
+.slider {
+  width: 320px;
+  text-align: center;
+  overflow: hidden;
+  > a {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 20px 0 1.5rem 10px;
+    position: relative;
+    &:active {
+      top: 1px;
+      background: $primaryColor;
+    }
+    &:focus {
+      background: $primaryColor;
+      color: $primaryColor;
+    }
+  }
+}
+
+.slides {
+  display: flex;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $primaryColor;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 320px;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: $bgColor;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
+  img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .container {
+    max-width: 360px;
+    width: 100%;
+  }
+  .col-3 {
+    max-width: 100%;
+  }
+  .slides {
+    > div {
+      width: 220px;
+      height: 200px;
+    }
+  }
+  .slider {
+    width: 220px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .col-3 {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .col-3 {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .col-3 {
+    max-width: 33.33%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }
