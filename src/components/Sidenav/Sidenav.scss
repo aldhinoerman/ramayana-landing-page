@@ -185,9 +185,18 @@
 
 @media (max-width: 420px) {
   .sidenav {
-    width: 300px;
+    width: 200px;
     > .inner {
-      width: 300px;
+      width: 200px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sidenav {
+    width: 380px;
+    > .inner {
+      width: 380px;
     }
   }
 }

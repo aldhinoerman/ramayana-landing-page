@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Loading } from './components/Loading';
 import ScrollButton from './components/ScrollButton';
-import { Other } from './pages/Other/Other';
+import { Other } from './pages/Other';
 
 class App extends React.Component {
   state = {
