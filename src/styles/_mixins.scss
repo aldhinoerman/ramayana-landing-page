@@ -7,12 +7,3 @@
   color: $color-value;
   letter-spacing: $ltr-value;
 }
-
-@mixin cardIcon($icon-img, $icon-hover) {
-  .feature__icon {
-    background-image: url(#{$imgPath}/#{$icon-img});
-  }
-  &:hover .feature__icon {
-    background-image: url(#{$imgPath}/#{$icon-hover});
-  }
-}
