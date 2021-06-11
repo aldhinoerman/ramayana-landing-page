@@ -17,6 +17,8 @@
   margin-left: auto;
   .container-inner {
     margin: 75px;
+    border-bottom: 3px solid #eee;
+    padding-bottom: 75px;
   }
 }
 
@@ -235,13 +237,13 @@ button {
 
 @media (min-width: 540px) {
   .container {
-    width: 538px;
+    width: 100%;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 744px;
   }
   .wrapper {
     padding-left: 400px;
