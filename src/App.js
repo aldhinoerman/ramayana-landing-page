@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.scss';
-import Home from './pages/Home/Home';
+import Home from './pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { Loading } from './components/Loading/Loading';
-import ScrollButton from './components/ScrollButton/ScrollButton';
+import { Loading } from './components/Loading';
+import ScrollButton from './components/ScrollButton';
 import { Other } from './pages/Other/Other';
 
 class App extends React.Component {

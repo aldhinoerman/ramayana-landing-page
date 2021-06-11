@@ -1,9 +1,9 @@
 import React from 'react';
-import './Navbar.scss';
+import './Sidenav.scss';
 import ImageSlider from './ImageSlider';
 import { NavLink } from 'react-router-dom';
 
-const Navbar = (props) => {
+const Sidenav = (props) => {
     return (
         <div className={props.class}>
             <div className="inner">
@@ -20,14 +20,14 @@ const Navbar = (props) => {
                         <li><NavLink to="/other" className="text-link">SIMPLE PAGE</NavLink></li>
                         <li><NavLink to="/other" className="text-link">SHORT CODES</NavLink></li>
                         {/* <li className="submenu">
-                            <span><NavLink to="/other" className="text-link">DROPDOWN ONE</NavLink></span>
+                            <span><NavLink to="/" className="text-link">DROPDOWN ONE</NavLink></span>
                             <ul>
                                 <li><NavLink to="/other" className="text-link">SUB-DROPDOWN</NavLink></li>
                                 <li><NavLink to="/other" className="text-link">SUB-DROPDOWN</NavLink></li>
                             </ul>
                         </li>
                         <li className="submenu">
-                            <span><NavLink to="/other" className="text-link">DROPDOWN ONE</NavLink></span>
+                            <span><NavLink to="/" className="text-link">DROPDOWN ONE</NavLink></span>
                             <ul>
                                 <li><NavLink to="/other" className="text-link">SUB-DROPDOWN</NavLink></li>
                                 <li><NavLink to="/other" className="text-link">SUB-DROPDOWN</NavLink></li>
@@ -47,4 +47,4 @@ const Navbar = (props) => {
     )
 }
 
-export default Navbar
+export default Sidenav

@@ -6,9 +6,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 25px;
-  margin-top: 200px;
   .banner__card {
-    max-width: 350px;
+    max-width: 400px;
     background-color: rgba(250, 250, 250, 0.95);
     margin: 50px;
     padding: 50px;
@@ -33,14 +32,16 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 420px) {
   .banner {
     .banner__card {
+      margin: 10px;
+      padding: 10px;
       h1 {
-        font-size: 20px;
+        font-size: 1.5em;
       }
-      span, p {
-        font-size: 14px;
+      p {
+        font-size: 1em;
       }
     }
   }

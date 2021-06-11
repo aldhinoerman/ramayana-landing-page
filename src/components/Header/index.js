@@ -3,14 +3,15 @@ import './Header.scss';
 import * as FaIcons from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { Link } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
+import Sidenav from '../Sidenav';
 
 class Header extends React.Component {
     constructor() {
         super();
         this.state = {
             style: "sidenav",
-            menuStatus: "open"
+            menuStatus: "open",
+            width: "container"
         };
         this.handleClick = this.handleClick.bind(this);
     };
@@ -20,13 +21,15 @@ class Header extends React.Component {
             case "open":
                 this.setState({
                     menuStatus: "close",
-                    style: "sidenav active"
+                    style: "sidenav active",
+                    width: "wrapper"
                 });
                 break;
             case "close":
                 this.setState({
                     menuStatus: "open",
-                    style: "sidenav"
+                    style: "sidenav",
+                    width: "container"
                 });
                 break;
             default:
@@ -36,13 +39,15 @@ class Header extends React.Component {
     render() {
         return (
             <>
-                <div className="header container-fluid">
-                    <IconContext.Provider value={{ className: "header__toggle" }}>
-                        <FaIcons.FaBars onClick={this.handleClick} />
-                    </IconContext.Provider>
-                    <Link to="/" className="text-link"><h1>RAMAYANA</h1></Link>
+                <Sidenav class={this.state.style} />
+                <div className="header">
+                    <div className={this.state.width}>
+                        <IconContext.Provider value={{ className: "header__toggle" }}>
+                            <FaIcons.FaBars onClick={this.handleClick} />
+                        </IconContext.Provider>
+                        <Link to="/" className="text-link"><h1>RAMAYANA</h1></Link>
+                    </div>
                 </div>
-                <Navbar class={this.state.style} />
             </>
         )
     }

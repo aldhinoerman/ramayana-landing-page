@@ -1,72 +1,43 @@
 @import "../../styles/variables";
 
 .header {
-  background-color: $primaryColor;
-  color: $thirdBgColor;
-  position: fixed;
+  position: relative;
+  margin: 0;
   padding: 25px;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 1;
+  background-color: $primaryColor;
+  color: $bgColor;
   h1 {
     font-family: $primaryFont;
+    font-size: 2.25em;
+    display: inline;
     float: right;
-    padding-right: 100px;
+    margin-right: 60px;
   }
   .text-link {
-    color: $thirdBgColor;
+    color: $bgColor;
   }
   .header__toggle {
-    display: inline-block;
     cursor: pointer;
-    font-size: 25px;
-    padding-top: 10px;
-    padding-left: 35px;
+    font-size: 1.6em;
+    margin-top: 12px;
   }
 }
 
-@media (max-width: 360px) {
-  .header {
-    .header__toggle {
-      padding-left: 10px;
-    }
-  }
-}
-
-@media (max-width: 576px) and (max-width: 768px) {
+@media (max-width: 420px) {
   .header {
     h1 {
-      margin-right: 50px;
-      font-size: 24px;
-    }
-    .header__toggle {
-      font-size: 24px;
-      padding-top: 2px;
+      font-size: 2em;
+      margin-right: 0;
     }
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 320px) {
   .header {
     h1 {
-      margin-right: 50px;
-    }
-  }
-}
-
-@media (min-width: 992px) {
-  .header {
-    h1 {
-      margin-right: 50px;
-    }
-  }
-}
-
-@media (max-width: 1200px) {
-  .header {
-    h1 {
-      padding-right: 50px;
+      font-size: 1.5em;
+      margin-right: 0;
     }
   }
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Navbar.scss';
+import './Sidenav.scss';
 
 import CarouselImg from '../../assets/images/simple-post.jpg';
 import TopImg from '../../assets/images/right-image.jpg';

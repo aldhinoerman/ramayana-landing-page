@@ -5,9 +5,9 @@ import './Posts.scss'
 const Post1 = props => {
     return (
         <div className="container">
-            <div className="post1">
-                <div className="row">
-                    <div className="col-1">
+            <div className="container-inner">
+                <div className="post1">
+                    <div className="grid-1">
                         <img src={props.image} alt="banner" />
                         <h4>{props.title}</h4>
                         <p>{props.content}</p>
