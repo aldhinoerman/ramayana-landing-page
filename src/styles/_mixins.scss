@@ -1,9 +1,7 @@
 @import "./typography";
 @import "./variables";
 
-@mixin cardTypograph($size-value, $weight-value, $color-value, $ltr-value) {
-  font-size: $size-value;
+@mixin cardTypograph($weight-value, $line-value) {
   font-weight: $weight-value;
-  color: $color-value;
-  letter-spacing: $ltr-value;
+  line-height: $line-value;
 }

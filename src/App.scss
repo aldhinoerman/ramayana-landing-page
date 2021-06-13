@@ -3,9 +3,24 @@
 @import "./styles/global";
 @import "./styles/typography";
 
+h1 {
+  font-size: 36px;
+  color: $titleColor;
+}
+
+h4 {
+  font-size: 18px;
+  color: $titleColor;
+}
+
+p,
+span {
+  color: $mutedParagraphColor;
+  font-size: 14px;
+  line-height: 25px;
+}
+
 .App {
-  text-align: left;
-  background: $bgColor;
   transition: 0.5s;
 }
 
@@ -23,64 +38,24 @@
 }
 
 .wrapper {
-  padding-right: 1.1vw;
-  padding-left: 450px;
-}
-
-.grid-post-1 {
-  grid-area: image;
-}
-
-.grid-post-btt {
-  grid-area: button;
-}
-
-.grid-post-title {
-  grid-area: title;
-}
-
-.grid-post-content-1 {
-  grid-area: post1;
-}
-
-.grid-post-content-3 {
-  grid-area: post3;
-}
-
-.grid-post-content-4 {
-  grid-area: post4;
+  transition: all 0.5s;
+  margin-left: 16px;
 }
 
 .grid-1 {
   display: grid;
-  grid-template-columns: auto;
-  grid-auto-rows: auto;
+  gap: 20px;
 }
 
 .grid-2 {
   display: grid;
-  grid-template-areas:
-    "image title"
-    "image post1"
-    "image post2"
-    "image button";
-  grid-auto-rows: auto;
-}
-
-.grid-2-reverse {
-  display: grid;
-  grid-template-areas:
-    "title image"
-    "post3 image"
-    "post4 image"
-    "button image";
-  grid-auto-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
 }
 
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
-  grid-auto-rows: repeat(2, auto);
   gap: 10px;
 }
 
@@ -206,6 +181,20 @@ button {
   }
 }
 
+// Media Queries
+@media (min-width: 280px) {
+  h1 {
+    font-size: 2.25em;
+  }
+  h4 {
+    font-size: 1.125em;
+  }
+  p,
+  span {
+    font-size: 0.875em;
+  }
+}
+
 @media (min-width: 320px) {
   .container {
     width: 100%;
@@ -224,14 +213,14 @@ button {
       margin: 50px 0;
     }
   }
-  .grid-3 {
-    display: grid;
-    grid-template-columns: auto;
-    grid-auto-rows: auto;
-  }
+}
 
+@media (max-width: 540px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
   .slider {
-      width: 300px;
+    width: 100%;
   }
 }
 
@@ -246,15 +235,18 @@ button {
     width: 744px;
   }
   .wrapper {
-    padding-left: 400px;
+    padding-left: 368px;
   }
   .slider {
-    width: 300px;
+    width: 100%;
   }
 }
 @media (min-width: 1024px) {
   .container {
     width: 1000px;
+  }
+  .wrapper {
+    padding-left: 435px;
   }
 }
 @media (min-width: 1200px) {

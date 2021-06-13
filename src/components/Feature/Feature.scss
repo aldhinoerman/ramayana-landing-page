@@ -3,9 +3,15 @@
 
 .feature {
   .feature__card {
-    background-color: $featureBgColor;
-    padding: .8rem;
+    display: grid;
+    justify-items: center;
     text-align: center;
+    gap: 10px;
+  }
+  .feature__card {
+    background-color: $featureBgColor;
+    padding: 2.5rem;
+    min-height: 275px;
     transition: all 0.5s;
     &:hover {
       background-color: $primaryColor;
@@ -16,42 +22,6 @@
       p {
         color: $bgColor;
       }
-    }
-    p {
-      color: $mutedParagraphColor;
-      margin-bottom: 0px;
-      transition: all 0.5s;
-    }
-    h4 {
-      margin-bottom: 20px;
-      transition: all 0.5s;
-    }
-    .feature__icon {
-      width: 50px;
-      height: 50px;
-      display: inline-block;
-      margin-bottom: 30px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      transition: all 0.5s;
-    }
-  }
-}
-
-@media (max-width: 576px) {
-  .feature {
-    .feature__card {
-      p {
-        font-size: 14px;
-      }
-    }
-  }
-}
-
-@media (min-width: 992px) {
-  .feature {
-    .feature__card {
-      height: 200px;
     }
   }
 }

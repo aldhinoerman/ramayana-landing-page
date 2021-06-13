@@ -3,9 +3,11 @@ import './Loading.scss';
 
 export const Loading = () => {
     return (
-        <div className="loading">
-            <div></div>
-            <div></div>
+        <div className="container">
+                <div className="loading">
+                    <div></div>
+                    <div></div>
+            </div>
         </div>
     )
 }

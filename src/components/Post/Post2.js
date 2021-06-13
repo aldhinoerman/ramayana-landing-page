@@ -21,11 +21,15 @@ const Post2 = props => {
                     <div className="container-inner">
                         <div className="post2">
                             <div className="grid-2">
-                                <img className="grid-post-1" src={props.image} alt="banner" />
-                                <h4 className="grid-post-title">{props.title}</h4>
-                                <p className="grid-post-content-1">{props.content1}</p>
-                                <p className="grid-post-content-2">{props.content2}</p>
-                                <Link to="/" className="text-link grid-post-btt"><button className="primary-btn">Read More</button></Link>
+                                <div>
+                                    <img src={props.image} alt="banner" />
+                                </div>
+                                <div>
+                                    <h4>{props.title}</h4>
+                                    <p>{props.content1}</p>
+                                    <p>{props.content2}</p>
+                                    <Link to="/" className="text-link"><button className="primary-btn">Read More</button></Link>
+                                </div>
                             </div>
                         </div>
                     </div>

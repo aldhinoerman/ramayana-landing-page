@@ -1,26 +1,13 @@
 @import "../../styles/variables";
 
 .posts {
-  h4 {
-    padding: 20px 0;
-  }
-  p {
-    padding-bottom: 20px;
-    color: $mutedParagraphColor;
-    font-weight: 400;
-    letter-spacing: 0.2px;
-  }
-}
-.post1 {
   img {
     width: 100%;
   }
-}
 
-.post2 {
-  img {
-    width: 100%;
-    height: auto;
-    padding: 35px;
+  .post2 {
+    p {
+      margin: 35px 0;
+    }
   }
 }
