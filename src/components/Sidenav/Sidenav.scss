@@ -185,18 +185,13 @@
 
 @media (max-width: 540px) {
   .sidenav {
-    width: 150px;
+    width: 100%;
+    margin-top: 90px;
+    height: auto;
+    position: absolute;
+    z-index: 1;
     > .inner {
-      width: 150px;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .sidenav {
-    width: 380px;
-    > .inner {
-      width: 380px;
+      width: 100%;
     }
   }
 }

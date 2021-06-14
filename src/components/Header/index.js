@@ -39,7 +39,6 @@ class Header extends React.Component {
     render() {
         return (
             <>
-                <Sidenav class={this.state.style} />
                 <div className="header">
                     <div className={this.state.width}>
                         <IconContext.Provider value={{ className: "header__toggle" }}>
@@ -48,6 +47,7 @@ class Header extends React.Component {
                         <Link to="/" className="text-link"><h1>RAMAYANA</h1></Link>
                     </div>
                 </div>
+                <Sidenav class={this.state.style} />
             </>
         )
     }

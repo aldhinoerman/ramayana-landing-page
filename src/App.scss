@@ -223,6 +223,12 @@ button {
   .slider {
     width: 100%;
   }
+  .slides {
+    > div {
+      width: 450px;
+      height: 400px;
+    }
+  }
 }
 
 @media (min-width: 540px) {
