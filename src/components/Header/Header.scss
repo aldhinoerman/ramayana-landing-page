@@ -1,7 +1,8 @@
 @import "../../styles/variables";
 
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
   margin: 0;
   padding: 25px;
   width: 100%;
