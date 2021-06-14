@@ -40,3 +40,9 @@
     }
   }
 }
+
+@media (max-width: 540px) {
+  .header {
+    z-index: 99;
+  }
+}
