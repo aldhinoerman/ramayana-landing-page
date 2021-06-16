@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const Sidenav = (props) => {
     return (
-        <div className={props.class}>
+        <div className={props.class} id="sidenav">
             <div className="inner">
 
                 <div id="search" className="alt">

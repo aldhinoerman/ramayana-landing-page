@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/typography";
 
 .header {
   position: sticky;
@@ -8,27 +9,59 @@
   width: 100%;
   background-color: $primaryColor;
   color: $bgColor;
+  display: flex;
   h1 {
     color: $bgColor;
-    display: inline;
     float: right;
-    margin-right: 60px;
+    padding-right: 50px;
   }
   .text-link {
     color: $bgColor;
   }
-  .header__toggle {
-    cursor: pointer;
-    font-size: 1.6em;
-    margin-top: 12px;
+  .toggle {
+    text-decoration: none;
+    transition: left 0.5s ease;
+    border: 0;
+    display: block;
+    color: #fff;
+    height: 100px;
+    line-height: 100px;
+    outline: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 100px;
+    top: 0;
+    width: 100px;
+    z-index: 10000;
+    &::before {
+      font-family: Webfont;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none !important;
+    }
+    &::before {
+      content: "\f0c9";
+      font-size: 2rem;
+      height: inherit;
+      left: 0;
+      line-height: inherit;
+      position: absolute;
+      text-indent: 0;
+      top: 0;
+      width: inherit;
+    }
   }
 }
 
 @media (max-width: 280px) {
   .header {
+    padding: 10px;
     h1,
-    .header__toggle {
-      font-size: 1.6em;
+    .toggle {
+      font-size: 1.8em;
+    }
+    .toggle {
+      line-height: 58px;
     }
   }
 }
@@ -36,7 +69,7 @@
 @media (max-width: 420px) {
   .header {
     h1 {
-      margin-right: 0;
+      padding-right: 0;
     }
   }
 }

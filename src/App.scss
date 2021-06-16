@@ -38,9 +38,12 @@ span {
 }
 
 .wrapper {
-  transition: all 0.5s;
-  margin-left: 16px;
+  width: 100%;
   padding-right: 15px;
+  padding-left: 420px;
+  margin-right: auto;
+  margin-left: auto;
+  transition: all 0.5s;
 }
 
 .grid-1 {
@@ -195,6 +198,9 @@ button {
   span {
     font-size: 0.875em;
   }
+  .wrapper {
+    padding-left: 15px;
+  }
 }
 
 @media (min-width: 320px) {
@@ -243,8 +249,7 @@ button {
     width: 744px;
   }
   .wrapper {
-    padding-left: 390px;
-    margin-right: -25px;
+    padding-left: 410px;
   }
   .slider {
     width: 100%;
@@ -256,8 +261,7 @@ button {
     width: 1000px;
   }
   .wrapper {
-    padding-left: 435px;
-    margin-right: -25px;
+    padding-left: 420px;
   }
 }
 

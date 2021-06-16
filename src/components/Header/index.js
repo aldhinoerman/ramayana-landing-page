@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.scss';
-import * as FaIcons from 'react-icons/fa';
-import { IconContext } from 'react-icons/lib';
+// import * as FaIcons from 'react-icons/fa';
+// import { IconContext } from 'react-icons/lib';
 import { Link } from 'react-router-dom';
 import Sidenav from '../Sidenav';
 
@@ -41,9 +41,7 @@ class Header extends React.Component {
             <>
                 <div className="header">
                     <div className={this.state.width}>
-                        <IconContext.Provider value={{ className: "header__toggle" }}>
-                            <FaIcons.FaBars onClick={this.handleClick} />
-                        </IconContext.Provider>
+                        <a href="#sidenav" onClick={this.handleClick} className="toggle">Toggle</a>
                         <Link to="/" className="text-link"><h1>RAMAYANA</h1></Link>
                     </div>
                 </div>
