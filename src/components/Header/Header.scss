@@ -5,7 +5,6 @@
   position: sticky;
   top: 0;
   width: 100%;
-  padding: 0 85px 0 25px;
   background-color: $primaryColor;
   color: $bgColor;
   display: flex;
@@ -23,13 +22,12 @@
     display: block;
     color: #fff;
     height: 100px;
-    line-height: 100px;
     overflow: hidden;
     position: absolute;
     text-indent: 100px;
-    top: 0;
     width: 100px;
     z-index: 10000;
+    top: 0;
     &::before {
       font-family: Webfont;
       font-style: normal;
@@ -50,28 +48,40 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 280px) {
   .header {
-    padding: 0;
     h1,
     .toggle {
       font-size: 1.8em;
+      margin: 0;
     }
     .toggle {
-      line-height: 76px;
+      line-height: 58px;
     }
   }
 }
 
 @media (max-width: 540px) {
   .header {
-    padding: 0 10px;
+    padding: 10px 0;
     z-index: 99;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .header {
-    padding: 0 25px;
+    padding: 25px 15px 25px 25px;
+    h1 {
+      font-size: 36px;
+    }
+    .toggle {
+      line-height: 100px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 25px 85px 25px 25px;
   }
 }

@@ -8,7 +8,9 @@ const Post1 = props => {
             <div className="container-inner">
                 <div className="post1">
                     <div className="grid-1">
-                        <img src={props.image} alt="banner" />
+                        <div>
+                            <img src={props.image} alt="banner" />
+                        </div>
                         <h4>{props.title}</h4>
                         <p>{props.content}</p>
                         <p>{props.content2}</p>

@@ -12,7 +12,6 @@
     padding: 3rem;
     h1 {
       @include cardTypograph(700, 48px);
-      margin-bottom: 20px;
     }
     em {
       font-style: normal;
