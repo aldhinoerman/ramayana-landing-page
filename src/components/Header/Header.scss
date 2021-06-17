@@ -4,16 +4,14 @@
 .header {
   position: sticky;
   top: 0;
-  margin: 0;
-  padding: 25px;
   width: 100%;
+  padding: 0 85px 0 25px;
   background-color: $primaryColor;
   color: $bgColor;
   display: flex;
   h1 {
     color: $bgColor;
     float: right;
-    padding-right: 50px;
   }
   .text-link {
     color: $bgColor;
@@ -26,7 +24,6 @@
     color: #fff;
     height: 100px;
     line-height: 100px;
-    outline: 0;
     overflow: hidden;
     position: absolute;
     text-indent: 100px;
@@ -53,29 +50,28 @@
   }
 }
 
-@media (max-width: 280px) {
+@media (max-width: 320px) {
   .header {
-    padding: 10px;
+    padding: 0;
     h1,
     .toggle {
       font-size: 1.8em;
     }
     .toggle {
-      line-height: 58px;
-    }
-  }
-}
-
-@media (max-width: 420px) {
-  .header {
-    h1 {
-      padding-right: 0;
+      line-height: 76px;
     }
   }
 }
 
 @media (max-width: 540px) {
   .header {
+    padding: 0 10px;
     z-index: 99;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 25px;
   }
 }
